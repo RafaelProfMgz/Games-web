@@ -1,39 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo da Forca</title>
     <link rel="stylesheet" href="Forca.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-      <div class="container">
-        <h1>Jogo da Forca</h1>
-        <canvas id="forcaCanvas" width="200" height="200"></canvas>
-        <div id="palavra"></div>
-        <input type="text" id="letraInput" maxlength="1" placeholder="Letra" />
-        <button id="adivinharBtn">Adivinhar</button>
-        <div>
-          <input
-            type="text"
-            id="palavraCompleta"
-            placeholder="Digite a palavra completa"
-          />
-          <button id="adivinharPalavraBtn">Adivinhar Palavra</button>
+        <div class="container">
+            <div class="container2">
+                <h1>Bem-vindo ao Jogo!</h1>
+                <p>Selecione um gênero e comece sua aventura.</p>
+                <div class="icon-container">
+                    <div class="genre" data-value="programacao">
+                        <img src="/Asstes/forca/programcao.png" alt="Programação" title="Programação" />
+                        <p>Programação</p>
+                    </div>
+                    <div class="genre" data-value="jogos">
+                        <img src="/Asstes/forca/gba.png" alt="Jogos" title="Jogos" />
+                        <p>Jogos</p>
+                    </div>
+                    <div class="genre" data-value="filmes">
+                        <img src="/Asstes/forca/filme.png" alt="Filmes" title="Filmes" />
+                        <p>Filmes</p>
+                    </div>
+                    <div class="genre" data-value="tecnologia">
+                        <img src="/Asstes/forca/tecnologia.png" alt="Tecnologia" title="Tecnologia" />
+                        <p>Tecnologia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-content" style="display:none;">
+                <h1>Jogo da Forca</h1>
+                <div id="dica"></div>
+                <canvas id="forcaCanvas" width="200" height="200"></canvas>
+                <div id="palavra"></div>
+                <input type="text" id="letraInput" maxlength="1" placeholder="Letra" />
+                <button id="adivinharBtn">Adivinhar</button>
+                <div>
+                    <input
+                        type="text"
+                        id="palavraCompleta"
+                        placeholder="Digite a palavra completa"
+                    />
+                    <button id="adivinharPalavraBtn">Adivinhar Palavra</button>
+                </div>
+                <div id="resultado"></div>
+            </div>
+            <!-- Modal de vitória -->
+            <div id="modalVitoria" class="modal">
+                <div class="modal-conteudo">
+                    <span id="fecharModal" class="fechar">&times;</span>
+                    <h2>Parabéns, você ganhou!</h2>
+                    <canvas id="trofeuCanvas" width="200" height="300"></canvas>
+                    <p>
+                        Você completou o jogo com sucesso! Prepare-se para o próximo desafio.
+                    </p>
+                    <button id="proximoJogoBtn" class="btn-proximo">Próximo Jogo</button>
+                    <p>Seu tempo: <span id="tempoFinal">00:00</span></p>
+                </div>
+            </div>
+            <!-- Modal de perda -->
+            <div id="modalPerda" class="modal">
+                <div class="modal-conteudo">
+                    <h2>Que pena, você perdeu!</h2>
+                    <div>😢</div>
+                    <p>A palavra era: <span id="palavraPerdida"></span></p>
+                    <button id="proximoJogoBtn" class="btn-proximo">Tentar Novamente</button>
+                </div>
+            </div>
         </div>
-        <div id="resultado"></div>
-        <button id="proximoJogoBtn">Próximo Jogo</button>
-      </div>
     </main>
     <script src="Forca.js"></script>
-
-  </body>
+</body>
 </html>

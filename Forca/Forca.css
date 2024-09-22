@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -41,12 +42,80 @@ nav ul li a:hover {
 }
 
 main {
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 20rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s;
+  position: relative;
+}
+
+#modalPerda div {
+  text-align: center;
+}
+
+#modalPerda div div {
+  font-size: 7rem;
+  margin: 0 auto;
+}
+
+.trofeu {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.btn-proximo {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-proximo:hover {
+  background-color: #45a049;
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: black;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espaçamento ajustado */
+  margin: 10px 0;
 }
 
 .container {
@@ -54,8 +123,46 @@ main {
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  height: 70%;
+  max-width: 600px;
+  position: relative;
+}
+.container2 {
+  max-width: 600px; /* Aumenta a largura máxima do modal */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+  display: grid; /* Usa grid para a disposição das imagens */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(100px, 1fr)
+  ); /* Cria colunas que se ajustam */
+  gap: 1rem; /* Espaçamento entre os itens */
+  margin: 10px 0;
+}
+
+.genre {
+  cursor: pointer;
+  text-align: center;
+}
+
+.genre img {
+  width: 50px; /* Ajuste o tamanho conforme necessário */
+  height: 50px;
+}
+
+.genre:hover {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+  transition: transform 0.3s;
+}
+
+.game-content {
+  display: none; /* Inicialmente oculto */
 }
 
 .game-container {
@@ -82,9 +189,8 @@ input[type="text"] {
 }
 
 #palavraCompleta {
-  width: calc(100% - 22px); /* Ajusta a largura para manter o padding */
+  width: calc(100% - 22px);
 }
-
 
 button {
   background-color: #3498db;
