@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e8f0f2; /* Tom mais claro para o fundo */
+  color: #333;
+  overflow: hidden;
+  margin: 0; /* Remove margens padrão */
+}
+
+header {
+  background-color: #2c3e50; /* Azul escuro */
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s; /* Transição suave para hover */
+}
+
+nav ul li a:hover {
+  color: #18bc9c; /* Cor ao passar o mouse */
+}
+main {
+  text-align: center; /* Centraliza o texto */
+  display: flex; /* Usando flexbox */
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100vh; /* Preenche a altura da viewport */
+}
+
+.game-container {
+  width: 400px;
+  height: 400px;
+  background-color: #000;
+  position: relative;
+}
+
+.grid {
+  width: 200px; /* 10 colunas, cada quadrado de 20px */
+  height: 400px; /* 20 linhas */
+  display: grid;
+  grid-template-columns: repeat(10, 20px);
+  grid-template-rows: repeat(20, 20px);
+  border: 2px solid #333;
+  background-color: #f0f0f0;
+}
+
+.grid div {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+}
+
+.mini-grid {
+  width: 80px; /* 4 colunas, cada quadrado de 20px */
+  height: 80px; /* 4 linhas */
+  display: grid;
+  grid-template-columns: repeat(4, 20px);
+  grid-template-rows: repeat(4, 20px);
+  margin-left: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.tetromino {
+  background-color: #ff5733;
+}
+
+.grid div.taken {
+  background-color: #333;
+}

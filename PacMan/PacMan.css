@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e8f0f2; /* Tom mais claro para o fundo */
+  color: #333;
+  overflow: hidden;
+  margin: 0; /* Remove margens padrão */
+}
+
+header {
+  background-color: #2c3e50; /* Azul escuro */
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s; /* Transição suave para hover */
+}
+
+nav ul li a:hover {
+  color: #18bc9c; /* Cor ao passar o mouse */
+}
+main {
+  text-align: center; /* Centraliza o texto */
+  display: flex; /* Usando flexbox */
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100vh; /* Preenche a altura da viewport */
+}
+.game-container {
+  width: 400px;
+  height: 400px;
+  background-color: #000;
+  position: relative;
+}
+
+.over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px; /* Arredondar bordas da div pai */
+  border: 2px solid #3498db3d; /* Borda azul claro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra no mapa */
+}
+
+#pacman {
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 180px;
+  left: 180px;
+  transition: all 0.1s;
+}
+
+.mouth {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 40px solid black;
+  border-bottom: 20px solid transparent;
+  border-radius: 50%;
+}
+
+#pacman.open .mouth {
+  border-left-color: transparent;
+}

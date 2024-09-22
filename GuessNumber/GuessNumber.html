@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="GuessNumber.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Jogo de Adivinhação</h1>
+        <p>Adivinhe um número entre 1 e 100:</p>
+        <input
+          type="number"
+          id="guess"
+          placeholder="Digite seu palpite"
+          min="1"
+          max="100"
+        />
+        <button id="submit">Enviar</button>
+        <p id="message"></p>
+        <button id="restart" style="display: none">Jogar Novamente</button>
+      </div>
+    </main>
+
+    <script src="GuessNumber.js"></script>
+  </body>
+</html>

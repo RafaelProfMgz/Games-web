@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="Forca.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Jogo da Forca</h1>
+        <canvas id="forcaCanvas" width="200" height="200"></canvas>
+        <div id="palavra"></div>
+        <input type="text" id="letraInput" maxlength="1" placeholder="Letra" />
+        <button id="adivinharBtn">Adivinhar</button>
+        <div>
+          <input
+            type="text"
+            id="palavraCompleta"
+            placeholder="Digite a palavra completa"
+          />
+          <button id="adivinharPalavraBtn">Adivinhar Palavra</button>
+        </div>
+        <div id="resultado"></div>
+        <button id="proximoJogoBtn">Próximo Jogo</button>
+      </div>
+    </main>
+    <script src="Forca.js"></script>
+
+  </body>
+</html>

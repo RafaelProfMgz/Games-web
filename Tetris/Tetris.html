@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo Tetris</title>
+    <link rel="stylesheet" href="Tetris.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Tetris</h1>
+      <div class="game-container">
+        <div class="grid">
+          <script>
+            for (let i = 0; i < 200; i++) {
+              document.write("<div></div>");
+            }
+          </script>
+        </div>
+        <div class="mini-grid">
+          <script>
+            for (let i = 0; i < 16; i++) {
+              document.write("<div></div>");
+            }
+          </script>
+        </div>
+      </div>
+      <p>Pontuação: <span id="score">0</span></p>
+      <button id="start-button">Iniciar Jogo</button>
+    </main>
+    <script src="Tetris.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e8f0f2; /* Tom mais claro para o fundo */
+  color: #333;
+  overflow: hidden;
+  margin: 0; /* Remove margens padrão */
+}
+
+header {
+  background-color: #2c3e50; /* Azul escuro */
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s; /* Transição suave para hover */
+}
+
+nav ul li a:hover {
+  color: #18bc9c; /* Cor ao passar o mouse */
+}
+main {
+  text-align: center; /* Centraliza o texto */
+  display: flex; /* Usando flexbox */
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100vh; /* Preenche a altura da viewport */
+}
+.container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ocupa a largura total */
+  max-width: 600px; /* Largura máxima para evitar telas muito largas */
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%; /* Largura total */
+  max-width: 200px; /* Largura máxima do input */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#message {
+  margin-top: 15px;
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Esconde o menu por padrão */
+    flex-direction: column; /* Alinha em coluna */
+    width: 100%; /* Ocupa a largura total */
+    background: #2c3e50; /* Fundo do menu */
+  }
+
+  nav ul.active {
+    display: flex; /* Mostra o menu quando ativo */
+  }
+
+  .menu-toggle {
+    display: flex; /* Mostra o botão de menu */
+  }
+
+  .container {
+    padding: 10px; /* Reduz o padding em telas menores */
+  }
+
+  input {
+    max-width: 90%; /* Permite que o input use mais espaço em telas pequenas */
+  }
+
+  button {
+    width: 100%; /* Botão ocupa toda a largura em telas pequenas */
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Página de Jogos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="/PacMan/PacMan.html">Pac-Man</a></li>
+          <li><a href="/Tetris/Tetris.html">Torre viva</a></li>
+          <li><a href="/Forca/Forca.html">Forca</a></li>
+          <li><a href="/ClickBall/ClickBall.html">Click Balls</a></li>
+          <li><a href="/GuessNumber/GuessNumber.html">Guess Number</a></li>
+          <li>
+            <a href="/MapPokemonRed/MapPokemonRed.html">Map Pokemon Red</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <main class="content">
+        <section class="hero">
+          <h1>Bem-vindo à Página de Jogos</h1>
+          <p>Explore nossos jogos mais populares!</p>
+          <a href="#mais-acessados" class="btn">Ver Jogos</a>
+        </section>
+
+        <section id="mais-acessados">
+          <h2>Jogos Mais Acessados</h2>
+          <div class="jogos-grid">
+            <div class="jogo">
+              <a href="/Forca/Forca.html">
+                <img
+                  src="/Asstes/forca.png"
+                  alt="Forca"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                />
+                <div class="placeholder" style="display: none">
+                  Imagem não disponível
+                </div>
+                <h3>Forca</h3>
+              </a>
+            </div>
+            <div class="jogo">
+              <a href="/ClickBall/ClickBall.html">
+                <img
+                  src="/Asstes/Balls.webp"
+                  alt="Click Balls"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                />
+                <div class="placeholder" style="display: none">
+                  Imagem não disponível
+                </div>
+                <h3>Click Balls</h3>
+              </a>
+            </div>
+            <div class="jogo">
+              <a href="/GuessNumber/GuessNumber.html">
+                <img
+                  src="/Asstes/guess number.webp"
+                  alt="Guess Number"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                />
+                <div class="placeholder" style="display: none">
+                  Imagem não disponível
+                </div>
+                <h3>Guess Number</h3>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="votacao">
+          <h2>Vote no seu Jogo Favorito!</h2>
+          <form>
+            <label for="jogo">Escolha um jogo:</label>
+            <select id="jogo">
+              <option value="pacman">Pac-Man</option>
+              <option value="clickballs">Click Balls</option>
+              <option value="guessnumber">Guess Number</option>
+            </select>
+            <button type="submit">Votar</button>
+          </form>
+        </section>
+
+        <section id="desafios">
+          <h2>Desafio da Semana</h2>
+          <p>Participe do desafio do Pac-Man e mostre suas habilidades!</p>
+          <button class="btn">Participar</button>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Seu Site. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

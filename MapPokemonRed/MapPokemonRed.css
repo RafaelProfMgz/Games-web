@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #e8f0f2; /* Tom mais claro para o fundo */
+  color: #333;
+  margin: 0; /* Remove margens padrão */
+}
+
+header {
+  background-color: #2c3e50; /* Azul escuro */
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s; /* Transição suave para hover */
+}
+
+nav ul li a:hover {
+  color: #18bc9c; /* Cor ao passar o mouse */
+}
+
+main {
+  padding: 20px;
+  text-align: center; /* Centraliza o texto */
+  display: flex; /* Usando flexbox */
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100vh; /* Preenche a altura da viewport */
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Espaço maior entre os controles e o título */
+}
+
+.controls button {
+  background-color: #3498db; /* Azul claro */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Adiciona transição de transformação */
+}
+
+.controls button:hover {
+  background-color: #2980b9; /* Azul mais escuro ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px; /* Espaço entre o título e o mapa */
+  color: #2c3e50; /* Azul escuro */
+}
+
+.over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px; /* Arredondar bordas da div pai */
+  border: 2px solid #3498db; /* Borda azul claro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra no mapa */
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+#mapa {
+  display: grid;
+  grid-template-columns: repeat(240, 1fr);
+  grid-template-rows: repeat(160, 1fr);
+  width: 400px;
+  height: 400px;
+  transition: transform 0.2s;
+}
+
+.tile {
+  width: 1.6667px;
+  height: 2.5px;
+}
+
+.grass {
+  background-color: green;
+}
+
+.water {
+  background-color: blue;
+}
+
+.mountain {
+  background-color: gray;
+}
+
+.city {
+  background-color: yellow;
+}
+
+.road {
+  background-color: brown; /* Cor para as ruas */
+}
+
+.house {
+  background-color: red; /* Cor para as casas */
+}
